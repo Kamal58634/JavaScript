@@ -1,4 +1,4 @@
-const myHeading=document.querySelector('h1');
+let myHeading=document.querySelector('h1');
 const myBtn=document.querySelector('button')
 const myImage=document.querySelector('img')
 
@@ -6,11 +6,12 @@ const myImage=document.querySelector('img')
 
 
 myHeading.textContent="Helllloooo Worlllllllld";
-const myLocalStorageName=localStorage.getItem('username')
-if(!myLocalStorageName){
+let myLocalStorageName=localStorage.getItem('username');
+console.log(myLocalStorageName)
+if(! myLocalStorageName){
     setUserName();
 }else{
-    myHeading=`Chorom is cool:${myLocalStorageName}` ;
+    myHeading.textContent=`Chorom is cool:${myLocalStorageName}` ;
 }
 
 // const htmlPage=document.querySelector('html');
@@ -42,8 +43,17 @@ myImage.onclick =() => {
 
 function setUserName(){
     const userName=prompt("Enter Your UserName:");
-    if(userName !=0){
+    
+    if(!userName ){
+        setUserName();
+        
+    }else{
+       
         localStorage.setItem('username',userName);
         myHeading.textContent=`Chorom is cool:${userName}`;
+
     }
+}
+myBtn.onclick = () =>{
+    setUserName();
 }
