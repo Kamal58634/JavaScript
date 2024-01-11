@@ -25,7 +25,7 @@ function guessCheck(){
                 lastResult.style.backgroundColor="green";
                 lowOrHi.textContent='';
                 setGameOver();
-            }else if(guessCount===10){
+            }else if(guessCount===3){
                 lastResult.textContent="Game Over !!!!!!!!";
                 lastResult.style.backgroundColor="red";
                 lowOrHi.textContent='';
@@ -53,4 +53,31 @@ function guessCheck(){
 
 
 
-        // console.log(randomNumber);
+function setGameOver(){
+    guessField.disabled=true;
+    guessSubmit.disabled=true;
+    resetButton=document.createElement("button");
+    resetButton.textContent="Start New Game";
+    document.body.append(resetButton);
+    resetButton.addEventListener('click',resetGame);
+}
+
+function resetGame(){
+    guessCount=1;
+    const resultParas=document.querySelectorAll(".resultParas p");
+    for(const resultPara of resultParas){
+        resultPara.textContent="";
+    }
+    lastResult.style.backgroundColor="white"
+    
+    resetButton.parentNode.removeChild(resetButton);
+    // guessField.parentNode.style.backgroundColor='red';
+    guessField.disabled=false;
+    guessSubmit.disabled=false;
+    guessField.value="";
+    guessField.focus();
+    let randomNumber = Math.floor(Math.random()*100);
+
+
+
+}
