@@ -25,7 +25,7 @@ function guessCheck(){
                 lastResult.style.backgroundColor="green";
                 lowOrHi.textContent='';
                 setGameOver();
-            }else if(guessCount===3){
+            }else if(guessCount===10){
                 lastResult.textContent="Game Over !!!!!!!!";
                 lastResult.style.backgroundColor="red";
                 lowOrHi.textContent='';
