@@ -7,6 +7,19 @@ const guesses      = document.querySelector(".guesses")  ;
 const lastResult   = document.querySelector(".lastResult");
 const lowOrHi      = document.querySelector(".lowOrHi")  ;
 
+const list         = document.querySelector(".list");
+createLiToList()
+function createLiToList(){
+    const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+    for(city of cities){
+        let town=city.toLowerCase();
+        town=town.replace(town[0],town[0].toUpperCase());
+        let newLi=document.createElement('li');
+        newLi.textContent=town;
+        list.appendChild(newLi);
+    }
+
+}
 let guessCount=1;
 let resetButton;
 

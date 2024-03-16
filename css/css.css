@@ -1,0 +1,94 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #EEEEEE,
+        #9E9E9E
+    );
+    filter: brightness(10%);
+    background-color: rgb(234, 227, 227);
+}
+.container{
+    margin-top: 8rem;
+    box-shadow: 2px 2px 30px lightgray;
+    border: 1px solid lightgray;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding-bottom: 2rem;
+    
+}
+.bright-container{
+    display: flex;
+    justify-content: flex-end;
+    margin: 2rem;
+}
+.brighness-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    padding: 6px;
+    box-shadow: 2px 2px 25px black;
+    cursor: pointer;
+}
+#range{
+    cursor: pointer;
+    background:#0a85ff;
+    height: 2px;
+    -webkit-appearance:none;
+}
+#range::-webkit-slider-thumb{
+    background:#0a85ff;
+}
+
+
+
+
+
+.title{
+    text-align: center;
+}
+label{
+     display: flex;
+}
+.new-todo-item input{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 2rem
+}
+.buttons{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+   
+}
+
+.todo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 3rem;
+    background-color: rgb(243, 238, 238);
+    height: 70px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 5rem;
+    margin-bottom: .2rem;
+}
+.todo__buttons{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
