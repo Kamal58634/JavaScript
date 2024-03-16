@@ -92,3 +92,24 @@ label{
     justify-content: center;
     align-items: center;
 }
+
+
+@media (max-width: 950px){
+    .resonse{
+        display: flex;
+        flex-direction: column;
+    }
+    .container_bmi{
+        position:static;
+        flex-direction: column;
+        order: 2;
+        margin-top: 6rem;
+
+    }
+    .container{
+        margin-top: 29rem;
+    }
+    .bright-container{
+        justify-content: center;
+    }
+}
